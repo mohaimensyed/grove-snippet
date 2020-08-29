@@ -31,7 +31,7 @@ while True:
 		if distant <= threshold:
 			print("Threshold reached")
 			setRGB(255,0,0)
-			setText_norefresh(t + "cm  " + obj + "\n" + d + "cm")
+			setText_norefresh(t + "cm  OBJ PRES\n" + d + "cm")
 		else:
 			setRGB(0,255,0)
 			setText_norefresh(t + "cm\n" + d + "cm")
