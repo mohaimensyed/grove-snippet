@@ -1,14 +1,16 @@
 import time
 import grovepi
+from grovepi import *
+from grove_rgb_lcd import *
 
 # Connect the Rotary Angle Sensor to analog port A2
 potentiometer = 2
 
 # Connect the LED to digital port D5, D4
-led = 5
 ultrasonic_ranger = 4
 
-grovepi.pinMode(led,"OUTPUT")
+setRGB(0,255,0)
+
 time.sleep(1)
 i = 0
 
@@ -23,8 +25,16 @@ while True:
         print(distant,'cm')
         if distant <= threshold:
             print("Threshold reached")
+            setRGB(255,0,0)
+        else:
+        	setRGB(0,255,0)
+
+
+    	setText_norefresh("T:" + threshold + "C\n" + "D :" + distant)
 
     except TypeError:
         print("Error")
     except IOError:
         print("Error")
+
+    sleep(0.05)
