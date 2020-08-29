@@ -28,17 +28,19 @@ while True:
 		if distant <= threshold:
 			print("Threshold reached")
 			setRGB(255,0,0)
+			obj = "OBJ PRES"
 		else:
 			setRGB(0,255,0)
+			obj = ""
 
 		t = str(threshold)
 		d = str(distant)
 
-		setText_norefresh("T:" + t + "C\n" + "D :" + d)
+		setText_norefresh("T:" + t + "cm  " + obj + "D :" + d)
 
 	except TypeError:
 		print("Error")
 	except IOError:
 		print("Error")
 
-	sleep(0.05)
+	sleep(0.2)
