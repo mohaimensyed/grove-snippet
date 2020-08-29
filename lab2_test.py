@@ -36,7 +36,7 @@ while True:
 		t = str(threshold)
 		d = str(distant)
 
-		setText_norefresh("T:" + t + "cm  " + obj + "D :" + d)
+		setText_norefresh(t + "cm  " + obj + "\n" + d + "cm")
 
 	except TypeError:
 		print("Error")
