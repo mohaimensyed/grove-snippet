@@ -21,16 +21,10 @@ while True:
 
         distant = ultrasonicRead(ultrasonic_ranger)
         print(distant,'cm')
+        if distant <= threshold:
+            print("Threshold reached")
 
-        if distant == threshold:
-        	print("Threshold reached")
-
-        # Send PWM signal to LED
-        grovepi.analogWrite(led,i//4)
-
-    except IOError:
-        print("Error")
-	except TypeError:
+    except TypeError:
         print("Error")
     except IOError:
         print("Error")
