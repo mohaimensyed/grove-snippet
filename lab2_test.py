@@ -31,7 +31,10 @@ while True:
 		else:
 			setRGB(0,255,0)
 
-		setText_norefresh("T:" + threshold + "C\n" + "D :" + distant)
+		t = str(threshold)
+		d = str(distant)
+
+		setText_norefresh("T:" + t + "C\n" + "D :" + d)
 
 	except TypeError:
 		print("Error")
