@@ -23,14 +23,14 @@ while True:
 
         distant = ultrasonicRead(ultrasonic_ranger)
         print(distant,'cm')
+        
         if distant <= threshold:
             print("Threshold reached")
             setRGB(255,0,0)
         else:
         	setRGB(0,255,0)
 
-
-    	setText_norefresh("T:" + threshold + "C\n" + "D :" + distant)
+		setText_norefresh("T:" + threshold + "C\n" + "D :" + distant)
 
     except TypeError:
         print("Error")
